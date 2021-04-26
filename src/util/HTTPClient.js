@@ -14,16 +14,16 @@ export const setAuth = () => {
       timeout: 30000,
       headers: {
         Authorization: "Bearer " + localStorage.jwt,
-        "Content-Type": "application/json"
-      }
+        "Content-Type": "application/json",
+      },
     });
   } else {
     instance = axios.create({
       baseURL: "",
       timeout: 30000,
       headers: {
-        "Content-Type": "application/json"
-      }
+        "Content-Type": "application/json",
+      },
     });
   }
 
@@ -34,7 +34,7 @@ export const setAuth = () => {
     function (error) {
       if (error.response.data.path === "/v1/login") {
         return Promise.reject(error);
-      } else if ( error.response.status !== undefined && error.response.status === 401 ) {
+      } else if (error.response.status !== undefined && error.response.status === 401) {
         localStorage.clear();
         window.location = "/login";
       } else {
@@ -57,5 +57,5 @@ export default {
   Put: (route, data) => {
     instance;
     return instance.put(route, JSON.stringify(data));
-  }
+  },
 };
