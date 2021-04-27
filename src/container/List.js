@@ -11,7 +11,7 @@ const List = props => {
     }, []);
 
     const _renderItem = ({ item }) => {
-        return <CoinCard data={item} />
+        return <CoinCard data={item} theme={props.theme} />
     };
 
     const _onRefresh = () => {

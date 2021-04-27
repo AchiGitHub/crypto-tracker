@@ -7,11 +7,11 @@
  * @flow
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import reducers from './src/reducers';
-import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StatusBar, StyleSheet, Text, View, Switch } from 'react-native';
 import { NativeRouter } from 'react-router-native';
 import thunk from 'redux-thunk';
 import List from './src/container/List';
@@ -23,15 +23,28 @@ const middleware = applyMiddleware(thunk);
 let store = createStore(reducers, middleware);
 
 const App = (props) => {
+
+  const [isDark, setIsDark] = useState(false);
+  const toggleSwitch = () => setIsDark(previousState => !previousState);
+
   return (
     <Provider store={store}>
       <NativeRouter>
-        <StatusBar barStyle="light-content" />
-        <SafeAreaView style={styles.container}>
+        <StatusBar barStyle={!isDark ? "light-content" : "dark-content"} />
+        <SafeAreaView style={!isDark ? styles.container : styles.containerLight}>
           <View style={styles.header}>
-            <Text style={styles.headerText}>Coins</Text>
+            <Text style={!isDark ? styles.headerText : styles.headerTextLight}>Coins</Text>
+            <View style={styles.themeToggle}>
+              <Switch
+                trackColor={{ false: "#767577", true: "#81b0ff" }}
+                thumbColor={isDark ? "#f4f3f4" : "#5E6172"}
+                ios_backgroundColor="#3e3e3e"
+                onValueChange={toggleSwitch}
+                value={isDark}
+              />
+            </View>
           </View>
-          <List />
+          <List theme={isDark} />
         </SafeAreaView>
       </NativeRouter>
     </Provider>
@@ -51,7 +64,21 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 25,
     fontWeight: '600',
-    color: '#fff'
+    color: '#fff',
+  },
+  themeToggle: {
+    position: 'absolute',
+    top: 0,
+    right: 15
+  },
+  headerTextLight: {
+    fontSize: 25,
+    fontWeight: '600',
+    color: '#000',
+  },
+  containerLight: {
+    backgroundColor: '#fff',
+    flex: 1
   }
 });
 

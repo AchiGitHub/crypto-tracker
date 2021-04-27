@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 
-function CoinCard({ data }) {
+function CoinCard({ data, theme }) {
 
   let percentageDecrease = false;
   let increaseRate;
@@ -14,8 +14,8 @@ function CoinCard({ data }) {
   }
 
   return (
-    <View style={styles.container}>
-      <View style={styles.cardBody}>
+    <View style={!theme ? styles.container : styles.containerLight}>
+      <View style={!theme ? styles.cardBody : styles.cardBodyLight}>
         <View style={styles.cardBodyTop}>
           <View>
             <Text style={styles.cardName} numberOfLines={2}>
@@ -26,7 +26,7 @@ function CoinCard({ data }) {
             </Text>
           </View>
           <View>
-            <Text style={styles.coinRate} numberOfLines={2}>
+            <Text style={!theme ? styles.coinRate : styles.coinRateLight} numberOfLines={2}>
               {formatter.format(parseFloat(data.priceUsd))}
             </Text>
             <Text style={percentageDecrease ? styles.rateOfDecrease : styles.rateOfIncrease} numberOfLines={2}>
@@ -100,6 +100,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: 'center'
   },
+  coinRateLight: {
+    color: "#000",
+    fontSize: 20,
+    fontWeight: "bold",
+    textAlign: 'center'
+  },
   cardAddress: {
     color: "gray",
     fontSize: 15,
@@ -134,6 +140,25 @@ const styles = StyleSheet.create({
     color: "#cdd0cb",
     fontSize: 16,
     fontWeight: '500'
+  },
+  containerLight: {
+    backgroundColor: "#5E6172",
+    marginHorizontal: 10,
+    borderRadius: 20,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+    marginVertical: 10
+  },
+  cardBodyLight: {
+    padding: 15,
+    backgroundColor: "#fff",
+    borderRadius: 10
   }
 });
 
