@@ -86,8 +86,7 @@ const styles = StyleSheet.create({
   cardBodyTop: {
     flexDirection: "row",
     justifyContent: "space-between",
-    alignContent: 'center',
-    marginVertical: 15
+    alignContent: 'center'
   },
   cardName: {
     color: "#EEC36E",
@@ -128,13 +127,13 @@ const styles = StyleSheet.create({
     color: "#5aa897",
     fontSize: 17,
     textAlign: 'center',
-    fontWeight: '600'
+    fontWeight: 'bold'
   },
   rateOfDecrease: {
     color: '#ec4646',
     fontSize: 17,
     textAlign: 'center',
-    fontWeight: '600'
+    fontWeight: 'bold'
   },
   coinSymbol: {
     color: "#cdd0cb",
