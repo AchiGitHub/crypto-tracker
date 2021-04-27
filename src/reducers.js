@@ -10,7 +10,7 @@ const initialState = {
   error: null
 };
 
-export default function todosReducer(state = initialState, action) {
+export default function coinDataReducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_COIN_DETAILS:
       return {
@@ -22,7 +22,7 @@ export default function todosReducer(state = initialState, action) {
         ...state,
         loading: false,
         error: null,
-        coinData: [...state.coinData, action.payload]
+        coinData: action.payload.data
       };
     case FETCH_COIN_DETAILS_FAILED:
       return {

@@ -20,10 +20,10 @@ const fetchCoinDetails = () => ({
     type: FETCH_COIN_DETAILS
 });
 
-const fetchCoinDetailsSuccess = todo => ({
+const fetchCoinDetailsSuccess = data => ({
     type: FETCH_COIN_DETAILS_SUCCESS,
     payload: {
-        ...todo
+        ...data
     }
 });
 
