@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
-    marginVertical: 10
+    marginVertical: 2
   },
   cardContainer: {
     padding: 15,
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     elevation: 24
   },
   cardBody: {
-    padding: 15,
+    padding: 8,
     backgroundColor: "#5E6172",
     borderRadius: 10
   },
@@ -82,21 +82,24 @@ const styles = StyleSheet.create({
     alignContent: 'center'
   },
   cardName: {
-    color: "#EEC36E",
+    color: "#F4D053",
     fontSize: 20,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    fontFamily: 'Roboto'
   },
   coinRate: {
     color: "#FFF",
     fontSize: 20,
     fontWeight: "bold",
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily: 'Roboto'
   },
   coinRateLight: {
     color: "#000",
     fontSize: 20,
     fontWeight: "bold",
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily: 'Roboto'
   },
   cardAddress: {
     color: "gray",
@@ -120,18 +123,21 @@ const styles = StyleSheet.create({
     color: "#5aa897",
     fontSize: 17,
     textAlign: 'center',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontFamily: 'Roboto'
   },
   rateOfDecrease: {
     color: '#ec4646',
     fontSize: 17,
     textAlign: 'center',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontFamily: 'Roboto'
   },
   coinSymbol: {
-    color: "#cdd0cb",
+    color: "#BBB6BB",
     fontSize: 16,
-    fontWeight: '500'
+    fontWeight: 'bold',
+    fontFamily: 'Roboto'
   },
   containerLight: {
     backgroundColor: "#5E6172",
@@ -145,10 +151,10 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
-    marginVertical: 10
+    marginVertical: 2
   },
   cardBodyLight: {
-    padding: 15,
+    padding: 8,
     backgroundColor: "#fff",
     borderRadius: 10
   }

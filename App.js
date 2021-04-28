@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     flex: 1
   },
   header: {
-    marginVertical: 10,
+    marginTop: 15,
     flexDirection: 'row',
     justifyContent: 'center'
   },
@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: 'bold',
     color: '#fff',
+    fontFamily: 'Roboto'
   },
   themeToggle: {
     position: 'absolute',
@@ -75,6 +76,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: 'bold',
     color: '#000',
+    fontFamily: 'Roboto'
   },
   containerLight: {
     backgroundColor: '#fff',
