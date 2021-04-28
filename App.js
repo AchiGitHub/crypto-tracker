@@ -14,6 +14,8 @@ import reducers from './src/reducers';
 import { SafeAreaView, StatusBar, StyleSheet, Text, View, Switch, Platform } from 'react-native';
 import { NativeRouter } from 'react-router-native';
 import thunk from 'redux-thunk';
+import { AdMobBanner, PublisherBanner } from 'react-native-admob';
+
 import List from './src/container/List';
 
 // Middlewares: applyMiddleware() tells createStore() how to handle middleware
@@ -45,6 +47,16 @@ const App = (props) => {
             </View>
           </View>
           <List theme={isDark} />
+          <View style={styles.adSlot}>
+            <AdMobBanner
+              adSize="mediumBanner"
+              adUnitID="ca-app-pub-3940256099942544/6300978111" //test ad id
+              // adUnitID="ca-app-pub-8167817804987450/7911429163"  //production id
+              testDeviceID={[PublisherBanner.simulatorId]}
+              onAdFailedToLoad={error => console.error(error)}
+              onAppEvent={event => console.log(event.name, event.info)}
+            />
+          </View>
         </SafeAreaView>
       </NativeRouter>
     </Provider>
@@ -81,6 +93,12 @@ const styles = StyleSheet.create({
   containerLight: {
     backgroundColor: '#fff',
     flex: 1
+  },
+  adSlot: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginBottom: 10,
+    marginTop: 10
   }
 });
 
