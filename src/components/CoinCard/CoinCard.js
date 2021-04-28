@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     alignContent: 'center'
   },
   cardName: {
-    color: "#EEC36E",
+    color: "#F4D053",
     fontSize: 20,
     fontWeight: "bold"
   },
@@ -129,9 +129,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   coinSymbol: {
-    color: "#cdd0cb",
+    color: "#BBB6BB",
     fontSize: 16,
-    fontWeight: '500'
+    fontWeight: 'bold'
   },
   containerLight: {
     backgroundColor: "#5E6172",
