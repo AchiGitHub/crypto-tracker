@@ -77,6 +77,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: 'bold',
     color: '#fff',
+    fontFamily: 'Roboto'
   },
   themeToggle: {
     position: 'absolute',
@@ -87,6 +88,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: 'bold',
     color: '#000',
+    fontFamily: 'Roboto'
   },
   containerLight: {
     backgroundColor: '#fff',

@@ -84,19 +84,22 @@ const styles = StyleSheet.create({
   cardName: {
     color: "#F4D053",
     fontSize: 20,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    fontFamily: 'Roboto'
   },
   coinRate: {
     color: "#FFF",
     fontSize: 20,
     fontWeight: "bold",
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily: 'Roboto'
   },
   coinRateLight: {
     color: "#000",
     fontSize: 20,
     fontWeight: "bold",
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily: 'Roboto'
   },
   cardAddress: {
     color: "gray",
@@ -120,18 +123,21 @@ const styles = StyleSheet.create({
     color: "#5aa897",
     fontSize: 17,
     textAlign: 'center',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontFamily: 'Roboto'
   },
   rateOfDecrease: {
     color: '#ec4646',
     fontSize: 17,
     textAlign: 'center',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontFamily: 'Roboto'
   },
   coinSymbol: {
     color: "#BBB6BB",
     fontSize: 16,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontFamily: 'Roboto'
   },
   containerLight: {
     backgroundColor: "#5E6172",
