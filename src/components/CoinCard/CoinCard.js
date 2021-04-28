@@ -56,13 +56,6 @@ const styles = StyleSheet.create({
     elevation: 5,
     marginVertical: 10
   },
-  innerContainer: {
-    padding: 40,
-    flexDirection: "row"
-  },
-  tag: {
-    color: "#B066A4"
-  },
   cardContainer: {
     padding: 15,
     paddingBottom: 0,
