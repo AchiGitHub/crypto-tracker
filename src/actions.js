@@ -6,7 +6,7 @@ export function fetchCoinList() {
     return dispatch => {
         dispatch(fetchCoinDetails());
         axios
-            .get(`http://api.coincap.io/v2/assets`)
+            .get(`https://api.coincap.io/v2/assets`)
             .then(res => {
                 dispatch(fetchCoinDetailsSuccess(res.data));
             })
