@@ -11,7 +11,7 @@ import React, { useState } from 'react';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import reducers from './src/reducers';
-import { SafeAreaView, StatusBar, StyleSheet, Text, View, Switch } from 'react-native';
+import { SafeAreaView, StatusBar, StyleSheet, Text, View, Switch, Platform } from 'react-native';
 import { NativeRouter } from 'react-router-native';
 import thunk from 'redux-thunk';
 import List from './src/container/List';
@@ -30,7 +30,7 @@ const App = (props) => {
   return (
     <Provider store={store}>
       <NativeRouter>
-        <StatusBar barStyle={!isDark ? "light-content" : "dark-content"} />
+        {Platform.OS === "ios" && <StatusBar barStyle={!isDark ? "light-content" : "dark-content"} />}
         <SafeAreaView style={!isDark ? styles.container : styles.containerLight}>
           <View style={styles.header}>
             <Text style={!isDark ? styles.headerText : styles.headerTextLight}>Coins</Text>
@@ -63,8 +63,9 @@ const styles = StyleSheet.create({
   },
   headerText: {
     fontSize: 25,
-    fontWeight: '600',
+    fontWeight: 'bold',
     color: '#fff',
+    fontFamily: 'Roboto'
   },
   themeToggle: {
     position: 'absolute',
@@ -73,8 +74,9 @@ const styles = StyleSheet.create({
   },
   headerTextLight: {
     fontSize: 25,
-    fontWeight: '600',
+    fontWeight: 'bold',
     color: '#000',
+    fontFamily: 'Roboto'
   },
   containerLight: {
     backgroundColor: '#fff',
