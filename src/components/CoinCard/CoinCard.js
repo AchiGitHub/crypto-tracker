@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
-    marginVertical: 10
+    marginVertical: 2
   },
   cardContainer: {
     padding: 15,
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     elevation: 24
   },
   cardBody: {
-    padding: 15,
+    padding: 8,
     backgroundColor: "#5E6172",
     borderRadius: 10
   },
@@ -145,10 +145,10 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
-    marginVertical: 10
+    marginVertical: 2
   },
   cardBodyLight: {
-    padding: 15,
+    padding: 8,
     backgroundColor: "#fff",
     borderRadius: 10
   }
