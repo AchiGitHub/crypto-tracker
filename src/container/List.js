@@ -31,8 +31,8 @@ const List = props => {
                 style={props.theme ? styles.inputLight : styles.inputDark}
                 value={search}
                 onChangeText={(e) => { onSearchChange(e), setSearch(e) }}
-                placeholder="Search"
-                placeholderTextColor={props.theme ? "#000" : "#fff"}
+                placeholder="Search..."
+                placeholderTextColor={props.theme ? "#000" : "#66666B"}
             />
             <FlatList
                 data={props.coinData}
@@ -74,20 +74,25 @@ export default connect(
 
 const styles = StyleSheet.create({
     inputDark: {
+        marginTop: 20,
         marginBottom: 12,
         marginLeft: 12,
         marginRight: 12,
-        borderBottomWidth: 0.2,
-        borderBottomColor: "#fff",
         color: '#fff',
-        fontSize: 18
+        fontSize: 18,
+        backgroundColor: "#262530",
+        borderRadius: 50,
+        padding: 20
     },
     inputLight: {
+        marginTop: 20,
         marginBottom: 12,
         marginLeft: 12,
         marginRight: 12,
-        borderBottomWidth: 0.2,
-        borderBottomColor: "#000",
-        fontSize: 18
+        color: '#fff',
+        fontSize: 18,
+        backgroundColor: "#F0F0F0",
+        borderRadius: 50,
+        padding: 20
     },
 });

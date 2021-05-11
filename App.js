@@ -62,7 +62,7 @@ const App = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#575972',
+    backgroundColor: '#191721',
     flex: 1
   },
   header: {
