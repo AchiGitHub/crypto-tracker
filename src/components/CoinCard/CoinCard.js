@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     color: "#D0CFD2",
     fontSize: 20,
     fontWeight: "bold",
-    fontFamily: 'Cochin'
+    fontFamily: "Roboto-Black"
   },
   cardNameLight: {
     color: "#000",
